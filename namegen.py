@@ -5,13 +5,13 @@ import random
 import argparse
 
 def maxlines():
-	with open('/home/karthik/Desktop/karthik_bhata7/Python/random_name/words.txt') as f:
+	with open('words.txt') as f:
 	    max = sum(1 for _ in f)
 	return max
 
 def getrandomline():
 	line_num = random.randrange(0, max)
-	line = linecache.getline('/home/karthik/Desktop/karthik_bhata7/Python/random_name/words.txt', line_num)
+	line = linecache.getline('words.txt', line_num)
 	line = line.split('\n')[0]
 	return line
 
